@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  max-width: 298px;
+  text-align: center;
+
+  gap: 32px;
+}
+
+.card p {
+  color: var(--eerie-black, #3d3d3d);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}

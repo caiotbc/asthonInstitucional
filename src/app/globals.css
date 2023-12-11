@@ -19,3 +19,7 @@ html {
 
   height: 300vh;
 }
+
+body {
+  overflow-x: hidden;
+}
