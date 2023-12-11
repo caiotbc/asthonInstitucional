@@ -1,0 +1,154 @@
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 32px 24px;
+
+  width: 100%;
+  max-width: 1440px;
+}
+
+.nav ul {
+  list-style: none;
+
+  display: flex;
+  gap: calc(56px - 16px);
+  align-items: center;
+  justify-content: center;
+}
+
+.nav ul li a {
+  color: var(--white, #fff);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 16px */
+
+  text-decoration: none;
+
+  padding: 8px;
+
+  transition: 0.2s;
+}
+
+.nav ul li a:hover {
+  filter: brightness(0.8);
+}
+
+.hamburgerToggle {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hamburgerToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    z-index: 100;
+  }
+
+  .hamburgerToggle div {
+    width: 24px;
+    height: 2px;
+    background: var(--white, #fff);
+
+    transition: 0.2s;
+  }
+
+  .hamburgerToggle div:first-child {
+    margin-bottom: 6px;
+  }
+
+  .hamburgerToggle div:last-child {
+    margin-top: 6px;
+  }
+
+  .hamburgerClose div:first-child {
+    transform: rotate(45deg);
+    margin: 0;
+    position: absolute;
+  }
+
+  .hamburgerClose div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburgerClose div:last-child {
+    transform: rotate(-45deg);
+    margin: 0;
+    position: absolute;
+  }
+
+  .nav {
+    position: fixed;
+    z-index: 100;
+  }
+
+  .nav > div {
+    padding: 16px;
+    background: var(--dark-blue);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .nav > div > img {
+    width: 80px;
+    z-index: 100;
+  }
+
+  .nav ul {
+    position: absolute;
+
+    margin: 0;
+
+    margin-top: 64px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+
+    padding: 40px 16px;
+    z-index: 99;
+
+    background: var(--dark-blue);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    transform: translateY(-150%);
+
+    transition: 0.2s;
+  }
+
+  .nav ul li a {
+    width: 100%;
+  }
+
+  .navOpen {
+    transform: translateY(0%) !important;
+  }
+}

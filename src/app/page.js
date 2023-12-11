@@ -1,75 +1,13 @@
-"use client";
-
 import Card from "@/components/Card";
 import styles from "./page.module.css";
-import { useState } from "react";
 import Form from "@/components/Form";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
-  const [navOpen, setNavOpen] = useState(false);
-
   return (
     <div className={styles.container}>
       <header>
-        <nav>
-          <div>
-            <img src="/logo.svg" alt="logo" />
-            <ul className={navOpen ? styles.navOpen : ""}>
-              <li>
-                <a
-                  href="#quem-somos"
-                  onClick={() => {
-                    setNavOpen(!navOpen);
-                  }}
-                >
-                  Quem somos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#produto"
-                  onClick={() => {
-                    setNavOpen(!navOpen);
-                  }}
-                >
-                  Produto
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#diferenciais"
-                  onClick={() => {
-                    setNavOpen(!navOpen);
-                  }}
-                >
-                  Diferenciais
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contato"
-                  onClick={() => {
-                    setNavOpen(!navOpen);
-                  }}
-                >
-                  Contato
-                </a>
-              </li>
-            </ul>
-            <button
-              className={`${styles.hamburgerToggle} ${
-                navOpen ? styles.hamburgerClose : ""
-              }`}
-              onClick={() => {
-                setNavOpen(!navOpen);
-              }}
-            >
-              <div></div>
-              <div></div>
-              <div></div>
-            </button>
-          </div>
-        </nav>
+        <Navbar />
 
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
