@@ -20,8 +20,8 @@ export default function Home() {
           </div>
 
           <div className={styles.CTA}>
-            <a href="#">Contrate já</a>
-            <a href="#">Conheça nosso produto</a>
+            <a href="https://wa.me/+5511975635251">Contrate já</a>
+            <a href="#produto">Conheça nosso produto</a>
           </div>
         </div>
         <img src="/graph.png" alt="graph" className={styles.heroGraph} />
@@ -78,7 +78,7 @@ export default function Home() {
             <img src="./estacao.png" alt="estacao" />
             <img src="./dashboard.jpg" alt="dashboard" />
           </div>
-          <a href="#" className={styles.cta2}>
+          <a href="https://wa.me/+5511975635251" className={styles.cta2}>
             Fale já com um especialista <img src="./external-link.svg" />
           </a>
         </section>
@@ -127,7 +127,7 @@ export default function Home() {
               desc="Transmissão confiável e criação de banco de dados hidrológicos."
             />
           </div>
-          <a href="#" className={styles.cta2}>
+          <a href="https://wa.me/+5511975635251" className={styles.cta2}>
             Fale já com um especialista <img src="./external-link.svg" />
           </a>
         </section>
